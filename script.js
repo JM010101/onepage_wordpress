@@ -19,18 +19,23 @@ navLinkElements.forEach(link => {
 // Popup Modal Functionality
 const popupModal = document.getElementById('popupModal');
 const downloadBtn = document.getElementById('downloadBtn');
+const downloadGuideBtn = document.getElementById('downloadGuideBtn');
+const downloadBtnSmall = document.getElementById('downloadBtnSmall');
 const closeModal = document.getElementById('closeModal');
 const downloadForm = document.getElementById('downloadForm');
 const successMessage = document.getElementById('successMessage');
 const downloadLink = document.getElementById('downloadLink');
 
-// Open modal when Download button is clicked
-if (downloadBtn) {
-    downloadBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal();
-    });
-}
+// Open modal when any Download button is clicked
+const downloadButtons = [downloadBtn, downloadGuideBtn, downloadBtnSmall].filter(Boolean);
+downloadButtons.forEach(btn => {
+    if (btn) {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    }
+});
 
 // Close modal when X button is clicked
 if (closeModal) {
@@ -107,7 +112,6 @@ if (downloadForm) {
 
         try {
             // Simulate API call - In production, this would be a real API endpoint
-            // For now, we'll simulate a delay and then show success
             await simulateFormSubmission(formData);
 
             // Hide form and show success message
@@ -116,19 +120,11 @@ if (downloadForm) {
 
             // Set PDF download link
             // In production, this would come from your backend/API
-            // For demo purposes, using a placeholder PDF
             downloadLink.href = '#pdf-download'; // Replace with actual PDF URL
             downloadLink.onclick = (e) => {
                 e.preventDefault();
-                // In production, this would trigger the actual PDF download
-                // For now, we'll simulate it
                 handlePDFDownload(formData);
             };
-
-            // Optional: Auto-close modal after 5 seconds
-            // setTimeout(() => {
-            //     closeModalFunc();
-            // }, 5000);
 
         } catch (error) {
             alert('There was an error processing your request. Please try again.');
@@ -154,7 +150,6 @@ function simulateFormSubmission(formData) {
             })
             .then(response => response.json())
             .then(data => {
-                // Handle response
                 resolve(data);
             })
             .catch(error => {
@@ -164,9 +159,6 @@ function simulateFormSubmission(formData) {
             
             // For demo purposes, just log the data
             console.log('Form submitted:', formData);
-            
-            // Store form data (you might want to send this to your backend)
-            // localStorage.setItem('leadData', JSON.stringify(formData));
             
             resolve({ success: true });
         }, 1500);
@@ -180,7 +172,6 @@ function handlePDFDownload(formData) {
     // 2. Create a download link with proper authentication/token
     // 3. Trigger the download
     
-    // For demo purposes:
     console.log('Downloading PDF for:', formData.email);
     
     // Example: Create a blob and download it
@@ -195,22 +186,15 @@ function handlePDFDownload(formData) {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    
-    // In production, you might want to:
-    // - Track the download event
-    // - Send analytics
-    // - Update your CRM/email marketing system
 }
 
 // Calendly Link Handler
 const bookCallButtons = [
-    document.getElementById('bookCallBtn'),
-    document.getElementById('bookCallHeroBtn'),
-    document.getElementById('bookCallCtaBtn')
+    document.getElementById('bookCallNavBtn'),
+    document.getElementById('bookCallDarkBtn')
 ];
 
 // Replace with your actual Calendly URL
-// Example: 'https://calendly.com/sussex-coastal-property/consultation'
 const calendlyUrl = 'https://calendly.com/your-calendly-link';
 
 bookCallButtons.forEach(btn => {
@@ -219,10 +203,6 @@ bookCallButtons.forEach(btn => {
             e.preventDefault();
             // Open Calendly in a new window
             window.open(calendlyUrl, '_blank');
-            
-            // Alternative: If you want to use Calendly inline widget:
-            // You would need to include Calendly's embed script and use:
-            // Calendly.initPopupWidget({url: calendlyUrl});
         });
     }
 });
@@ -253,9 +233,9 @@ window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
     if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.5)';
     } else {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        navbar.style.boxShadow = 'none';
     }
     
     lastScroll = currentScroll;
@@ -332,7 +312,4 @@ document.head.appendChild(style);
 // Initialize page
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Sussex Coastal Property site loaded');
-    
-    // Add any initialization code here
-    // For example, checking if user has already downloaded, etc.
 });

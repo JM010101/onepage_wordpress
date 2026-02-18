@@ -57,6 +57,12 @@ body {
     height: 50px;
 }
 
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .logo-icon svg {
     width: 100%;
     height: 100%;
@@ -206,6 +212,12 @@ body {
     height: 120px;
 }
 
+.logo-img-large {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .logo-icon-large svg {
     width: 100%;
     height: 100%;
@@ -289,6 +301,12 @@ body {
 .brochure-logo-icon {
     width: 60px;
     height: 60px;
+}
+
+.brochure-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .brochure-logo-icon svg {
@@ -733,6 +751,12 @@ body {
 .brochure-logo-icon-small {
     width: 40px;
     height: 40px;
+}
+
+.brochure-logo-img-small {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .brochure-logo-icon-small svg {

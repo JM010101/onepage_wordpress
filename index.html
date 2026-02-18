@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sussex Coastal Property - Premium Property Services">
+    <title>Sussex Coastal Property</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h2>Sussex Coastal Property</h2>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#" class="btn btn-primary" id="bookCallBtn">Book a Call</a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Premium Property Services<br>Along the Sussex Coast</h1>
+                <p class="hero-subtitle">Expert property solutions tailored to your needs</p>
+                <div class="hero-cta">
+                    <button class="btn btn-large btn-primary" id="downloadBtn">Download Guide</button>
+                    <a href="#" class="btn btn-large btn-secondary" id="bookCallHeroBtn">Book a Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Us</h2>
+                <p class="section-subtitle">Your trusted property partner on the Sussex Coast</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Sussex Coastal Property brings years of expertise and local knowledge to help you navigate the property market with confidence. We specialize in premium property services along the beautiful Sussex coastline.</p>
+                    <p>Our team combines market insight with personalized service to deliver exceptional results for our clients. Whether you're buying, selling, or investing, we're here to guide you every step of the way.</p>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span>Property Image</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Us</h2>
+                <p class="section-subtitle">What sets us apart</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Expert Knowledge</h3>
+                    <p>Deep understanding of the Sussex coastal property market</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Proven Results</h3>
+                    <p>Track record of successful transactions and satisfied clients</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Personalized Service</h3>
+                    <p>Tailored approach to meet your unique property needs</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>Local Expertise</h3>
+                    <p>Intimate knowledge of coastal properties and communities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Gallery Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Projects</h2>
+                <p class="section-subtitle">Recent property successes</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <span>Project 1</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Coastal Residence</h3>
+                        <p>Premium beachfront property</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <span>Project 2</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Modern Villa</h3>
+                        <p>Contemporary design meets coastal living</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <span>Project 3</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Heritage Property</h3>
+                        <p>Restored period home with character</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <span>Project 4</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Luxury Apartment</h3>
+                        <p>High-end living with sea views</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working With Us Section -->
+    <section id="contact" class="working-with-us">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Working With Us</h2>
+                <p class="section-subtitle">Simple, transparent, effective</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Initial Consultation</h3>
+                    <p>We start with a conversation to understand your property goals and requirements.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Strategy Development</h3>
+                    <p>Together, we create a tailored plan to achieve your property objectives.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Execution</h3>
+                    <p>Our team works diligently to execute the plan and deliver results.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Ongoing Support</h3>
+                    <p>We provide continued support to ensure your long-term success.</p>
+                </div>
+            </div>
+            <div class="cta-section">
+                <h3>Ready to Get Started?</h3>
+                <p>Book a call with us today to discuss your property needs</p>
+                <a href="#" class="btn btn-large btn-primary" id="bookCallCtaBtn">Book a Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sussex Coastal Property</h3>
+                    <p>Premium property services along the Sussex Coast</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Email: info@sussexcoastalproperty.co.uk</li>
+                        <li>Phone: +44 (0) 1234 567890</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sussex Coastal Property. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Popup Form Modal -->
+    <div class="modal-overlay" id="popupModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-header">
+                <h2>Download Your Free Guide</h2>
+                <p>Fill in your details to access our property guide</p>
+            </div>
+            <form id="downloadForm" class="download-form">
+                <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Download Guide</button>
+            </form>
+            <div class="success-message" id="successMessage" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h3>Thank You!</h3>
+                <p>Your download link has been sent to your email.</p>
+                <a href="#" class="btn btn-primary" id="downloadLink" target="_blank">Download PDF</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
